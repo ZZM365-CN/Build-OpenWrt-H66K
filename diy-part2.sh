@@ -45,11 +45,11 @@ git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-ar
 #pushd package/community
 
 # Add luci-aliyundrive-webdav
-rm -rf ../../customfeeds/luci/applications/luci-app-aliyundrive-webdav 
-rm -rf ../../customfeeds/packages/multimedia/aliyundrive-webdav
-svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/aliyundrive-webdav
-svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/luci-app-aliyundrive-webdav
-popd
+#rm -rf ../../customfeeds/luci/applications/luci-app-aliyundrive-webdav 
+#rm -rf ../../customfeeds/packages/multimedia/aliyundrive-webdav
+#svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/aliyundrive-webdav
+#svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/luci-app-aliyundrive-webdav
+#popd
 
 # Add luci-app-vssr <M>
 #git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
