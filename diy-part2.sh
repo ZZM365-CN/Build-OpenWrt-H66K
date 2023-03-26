@@ -61,6 +61,9 @@ popd
 # Add subconverter
 #git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
 
+#Add rk3568-roc-pc.dts
+git clone --depth=1 https://github.com/coolsnowwolf/lede/blob/master/target/linux/rockchip/files/arch/arm64/boot/dts/rockchip/rk3568-roc-pc.dts target/linux/rockchip/files/arch/arm64/boot/dts/rockchip/rk3568-roc-pc.dts 
+
 # Add luci-app-dockerman
 #rm -rf feeds/luci/applications/luci-app-dockerman
 #git clone --depth=1 https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerman
