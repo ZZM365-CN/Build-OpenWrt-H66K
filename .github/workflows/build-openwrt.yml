@@ -8,14 +8,14 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build OpenWrt SSH
+name: Build OpenWrt
 
 on:
   repository_dispatch:
   workflow_dispatch:
     inputs:
       ssh:
-        description: 'Start SSH via ngrok'
+        description: 'SSH connection to Actions'
         required: true
         default: 'true'
 
@@ -109,10 +109,11 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
     
-    - name: Start SSH via ngrok
+    - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@main
       with:
         mode: ngrok
+      if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
       env:
         # After sign up on the https://ngrok.com
         # You can find this token here: https://dashboard.ngrok.com/auth/your-authtoken
@@ -124,8 +125,7 @@ jobs:
 
         # This password you will use when authorizing via SSH
         SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
-        if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
-    
+       
     - name: Download package
       id: package
       run: |
