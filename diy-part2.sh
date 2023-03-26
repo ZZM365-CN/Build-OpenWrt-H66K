@@ -62,7 +62,7 @@ git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-ar
 #git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
 
 #Add rk3568-roc-pc.dts
-git clone --depth=1 https://github.com/coolsnowwolf/lede/blob/master/target/linux/rockchip/files/arch/arm64/boot/dts/rockchip/rk3568-roc-pc.dts target/linux/rockchip/files/arch/arm64/boot/dts/rockchip/rk3568-roc-pc.dts 
+wget https://raw.githubusercontent.com/coolsnowwolf/lede/master/target/linux/rockchip/files/arch/arm64/boot/dts/rockchip/rk3568-roc-pc.dts -O target/linux/rockchip/files/arch/arm64/boot/dts/rockchip/rk3568-roc-pc.dts
 
 # Add luci-app-dockerman
 #rm -rf feeds/luci/applications/luci-app-dockerman
