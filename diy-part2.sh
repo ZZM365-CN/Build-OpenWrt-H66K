@@ -55,9 +55,6 @@ git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-ar
 #git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
 #git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
 
-# Add ServerChan
-#git clone --depth=1 https://github.com/tty228/luci-app-serverchan feeds/luci/applications/luci-app-serverchan
-
 # Add subconverter
 #git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
 
@@ -67,12 +64,6 @@ git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-ar
 # Add luci-app-dockerman
 #rm -rf feeds/luci/applications/luci-app-dockerman
 #git clone --depth=1 https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerman
-
-# Test kernel 5.15
-sed -i 's/5.4/6.1/g' ./target/linux/rockchip/Makefile
-rm -rf target/linux/rockchip/image/armv8.mk
-cp -f $GITHUB_WORKSPACE/armv8.mk target/linux/rockchip/image/armv8.mk
-cp -f $GITHUB_WORKSPACE/999-fuck-rockchip-pcie.patch target/linux/rockchip/patches-6.1/999-fuck-rockchip-pcie.patch
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
