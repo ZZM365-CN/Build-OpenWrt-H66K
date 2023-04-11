@@ -65,10 +65,5 @@ git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-ar
 #rm -rf feeds/luci/applications/luci-app-dockerman
 #git clone --depth=1 https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerman
 
-# Rename hostname to OpenWrt
-pushd package/base-files/files/bin
-sed -i 's/OpneWrt/H66K/g' config_generate
-popd
-
 ./scripts/feeds update -a
 ./scripts/feeds install -a
