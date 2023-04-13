@@ -48,6 +48,11 @@ rm -rf feeds/luci/themes/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 
+#Add luci-theme-design
+rm -rf feeds/luci/themes/luci-theme-design
+git clone https://github.com/gngpp/luci-theme-design.git  package/luci-theme-design
+git clone https://github.com/gngpp/luci-app-design-config.git package/luci-app-design-config
+
 # Clone community packages to package/community
 #mkdir package/community
 #pushd package/community
