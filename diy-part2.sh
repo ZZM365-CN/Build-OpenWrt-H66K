@@ -37,7 +37,7 @@ sed -i "s/"services"/"system"/g" ./feeds/luci/applications/luci-app-cpufreq/luas
 #ln -sf ./feeds/luci/applications/luci-app-cpufreq ./package/feeds/luci/luci-app-cpufreq
 
 # Add OpenClash
-svn export https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
+git clone --depth=1 -b master https://github.com/vernesong/OpenClash package/luci-app-openclash
 
 #Add luci-app-mosdns
 # remove v2ray-geodata package from feeds (openwrt-22.03 & master)
