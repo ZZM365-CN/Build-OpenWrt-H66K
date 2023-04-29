@@ -30,13 +30,14 @@ sed -i "s/${orig_version}/${orig_version} ($(date +"%Y-%m-%d"))/g" package/lean/
 # luci-app-cpufreq
 sed -i "s/@arm/@(arm||aarch64)/g" ./feeds/luci/applications/luci-app-cpufreq/Makefile
 sed -i "s/"services"/"system"/g" ./feeds/luci/applications/luci-app-cpufreq/luasrc/controller/cpufreq.lua
+
 # Add cpufreq
 #rm -rf ./feeds/luci/applications/luci-app-cpufreq 
 #svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-cpufreq ./feeds/luci/applications/luci-app-cpufreq
 #ln -sf ./feeds/luci/applications/luci-app-cpufreq ./package/feeds/luci/luci-app-cpufreq
 
-# Add openclash
-git clone --depth=1 -b master https://github.com/vernesong/OpenClash package/luci-app-openclash
+# Add OpenClash
+svn export https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
 
 #Add luci-app-mosdns
 # remove v2ray-geodata package from feeds (openwrt-22.03 & master)
@@ -71,8 +72,8 @@ git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-ar
 #git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
 #git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
 
-# Add subconverter
-#git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
+Add subconverter
+git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter package/subconverter
 
 #Add rk3568-roc-pc.dts
 #wget https://raw.githubusercontent.com/coolsnowwolf/lede/master/target/linux/rockchip/files/arch/arm64/boot/dts/rockchip/rk3568-roc-pc.dts -O target/linux/rockchip/files/arch/arm64/boot/dts/rockchip/rk3568-roc-pc.dts
