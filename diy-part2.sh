@@ -72,7 +72,7 @@ git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-ar
 #git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
 #git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
 
-Add subconverter
+#Add subconverter
 git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter package/subconverter
 
 #Add rk3568-roc-pc.dts
